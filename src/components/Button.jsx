@@ -4,6 +4,7 @@ const bgClass = {
 
 const colorClass = {
   black: "text-black",
+  white: "text-white"
 };
 
 const widthClass = {
