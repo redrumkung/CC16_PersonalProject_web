@@ -6,6 +6,10 @@ import ProfilePage from "../pages/ProfilePage";
 import RedirectIfAuthenticated from "../features/auth/components/RedirectIfAuthenticated";
 import ProtectedRoute from "../features/auth/components/ProtectedRoute";
 import Spinner from "../components/Spinner";
+import Container from "../layouts/Container";
+import PostPage from "../pages/PostPage";
+import TripPage from "../pages/TripPage";
+import TransactionPage from "../pages/TransactionPage";
 
 const router = createBrowserRouter([
   { path: '/spinner', element: <Spinner /> },
@@ -22,7 +26,7 @@ const router = createBrowserRouter([
     element: (
       // <ProtectedRoute>
       <>
-        <header>Main Header</header>
+        <Container/>
         <Outlet />
       </>
       // </ProtectedRoute>
@@ -33,13 +37,25 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "service",
+        path: "services",
         element: <ServicePage />,
       },
       {
         path: "profile/:userId",
         element: <ProfilePage />,
       },
+      {
+        path: "create",
+        element: <PostPage/>
+      },
+      {
+        path: "services/:id",
+        element: <TripPage />,
+      },
+      {
+        path: "transaction/id",
+        element: <TransactionPage/>
+      }
     ],
   },
 ]);

@@ -9,6 +9,7 @@ const colorClass = {
 
 const widthClass = {
   full: "w-full",
+  half: "w-"
 };
 
 export default function Button({ children, bg, color, width, onClick }) {
